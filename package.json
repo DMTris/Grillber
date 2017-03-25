@@ -1,0 +1,31 @@
+{
+  "name": "node-es7-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "prepublish": "npm run build",
+    "test": "ava test",
+    "build": "babel src -d dist -s inline"
+  },
+  "keywords": [],
+  "author": "",
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "babel-polyfill",
+      "babel-register"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-pundits": "^2.0.3",
+    "babel-register": "^6.22.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25"
+  }
+}
