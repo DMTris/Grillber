@@ -1,2 +1,2 @@
 # Grillber
-Grillber app
+Grillber app, will use Express, Node.JS, and MongoDB.
