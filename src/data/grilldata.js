@@ -13,6 +13,6 @@ let grillThree = new Grill( 'Weber', 'Q', '1200', 'Gas', 'Small' );
 let grillFour = new Grill( 'Weber', 'Original Kettle', 'The 22', 'Charcoal', 'Medium' );
 let grillFive = new Grill( 'Weber', 'Ranch Kettle', 'The 44', 'Charcoal', 'Large' );
 
-let grillTotal = [ grillOne, grillTwo, grillThree ];
+let grillTotal = [ grillOne, grillTwo, grillThree, grillFour, grillFive ];
 
 export default grillTotal;
