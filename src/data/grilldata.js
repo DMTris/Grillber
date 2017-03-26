@@ -13,4 +13,4 @@ let grillThree = new Grill( 'Weber', 'Q', '1200', 'Gas', 'Small');
 
 let grillTotal = [ grillOne, grillTwo, grillThree ];
 
-export defaul grillTotal;
+export default grillTotal;
