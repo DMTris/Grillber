@@ -1,3 +1,4 @@
+//Creating an appointment
 import renterTotal from './renterdata.js';
 import grillTotal from './grilldata.js';
 import Appointment from './appointments.js';

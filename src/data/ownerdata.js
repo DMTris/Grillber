@@ -1,3 +1,4 @@
+//Will discontinue this in the future
 import Owner from './owners.js';
 /**
   * constructor method

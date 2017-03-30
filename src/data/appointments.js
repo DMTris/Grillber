@@ -1,3 +1,4 @@
+//Creating an Appointment class
 export default class {
 /**
   * constructor method

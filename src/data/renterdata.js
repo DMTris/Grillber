@@ -1,3 +1,4 @@
+//The data for renters
 import Renter from './renters.js';
 import {getCollection} from '../db.js';
 
@@ -16,6 +17,7 @@ let renterTotal = [ renterOne, renterTwo ];
 
 export default renterTotal;
 
+//Sending the renters to mongodb
 export const loadData = async() => {
   const renters = await getCollection('renters');
   const loadResult = await renters.insertMany([ renterOne, renterTwo ]);

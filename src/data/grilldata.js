@@ -1,3 +1,4 @@
+//Creating grills data
 import Grill from './grills.js';
 /**
   * constructor method

@@ -1,4 +1,4 @@
-//express connection
+//express connection and inserting my data to mongodb
 import Express from 'express';
 import Parser from 'body-parser';
 import {loadData} from './data/renterdata.js';
@@ -13,6 +13,7 @@ app.use('/grillber', GrillberRoute);
 
 app.listen(port, () => console.log(`App start: http://localhost:${port}`));
 
+//loading data to mongodb from renterdata.js
 loadData();
 
 export default app;

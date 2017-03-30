@@ -1,3 +1,4 @@
+//Creating a Renter class
 export default class {
   /**
     * constructor method

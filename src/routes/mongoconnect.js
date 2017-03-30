@@ -1,3 +1,4 @@
+//This is exporting mongodb commands
 import MongoClient from 'mongod';
 
 const COLLECTION_NAME = 'grillber';

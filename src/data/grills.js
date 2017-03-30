@@ -1,3 +1,4 @@
+//Creating a Grill class
 export default class {
 /**
   * constructor method

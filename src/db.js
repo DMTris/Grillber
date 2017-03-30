@@ -1,4 +1,4 @@
-//mongodb connection
+//mongodb connection and collection function to grillber
 import { MongoClient } from 'mongodb';
 
 const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/grillber';

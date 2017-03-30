@@ -1,3 +1,4 @@
+//This is creating routes for my data
 import {Router} from 'Express';
 import grillTotal from '../data/grilldata.js';
 import ownerTotal from '../data/ownerdata.js';

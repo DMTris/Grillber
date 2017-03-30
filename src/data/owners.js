@@ -1,3 +1,4 @@
+//Will discontinue this in the future
 import Renter from './renters.js';
 
 export default class extends Renter{
