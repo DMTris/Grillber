@@ -1,4 +1,6 @@
 import Renter from './renters.js';
+import {getCollection} from '../db.js';
+
 /**
   * constructor method
   * @param name
@@ -13,3 +15,8 @@ let renterTwo = new Renter( 'Tom Young', 'tomyoung@aol.com', '2468 Even Street, 
 let renterTotal = [ renterOne, renterTwo ];
 
 export default renterTotal;
+
+export const loadData = async() => {
+  const renters = await getCollection('renters');
+  const loadResult = await renters.insertMany([ renterOne, renterTwo ]);
+}
