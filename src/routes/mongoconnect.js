@@ -1,5 +1,5 @@
 //This is exporting mongodb commands
-import MongoClient from 'mongod';
+/*import MongoClient from 'mongod';
 
 const COLLECTION_NAME = 'grillber';
 const url = `mongodb://localhost:27017/${COLLECTION_NAME}`;
@@ -47,4 +47,4 @@ export const find = ( db, callback ) => {
 
 }
 
-export const close = db => db.close();
+export const close = db => db.close();*/
