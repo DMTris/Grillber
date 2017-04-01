@@ -20,7 +20,7 @@ export default renterTotal;
 //Sending and wiping the renters to mongodb
 export const loadRenterData = async() => {
   const renters = await getCollection('renters');
-  const loadResult = await renters.insertMany([ renterOne, renterTwo ]);
+  const loadResult = await renters.insertMany( renterTotal);
 }
 
 export const delRenterData = async() => {

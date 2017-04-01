@@ -21,7 +21,7 @@ export default calendar;
 //Sending and wiping the calendar to mongodb
 export const loadCalendarData = async() => {
   const calendar = await getCollection('calendar');
-  const loadResult = await calendar.insertMany([ appointmentOne ]);
+  const loadResult = await calendar.insertMany( calendar );
 }
 
 export const delCalendarData = async() => {

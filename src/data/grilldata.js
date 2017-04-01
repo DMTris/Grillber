@@ -24,7 +24,7 @@ export default grillTotal;
 //Sending and wiping the grills to mongodb
 export const loadGrillData = async() => {
   const grills = await getCollection('grills');
-  const loadResult = await grills.insertMany([ grillOne, grillTwo, grillThree, grillFour, grillFive ]);
+  const loadResult = await grills.insertMany( grillTotal );
 }
 
 export const delGrillData = async() => {
