@@ -1,6 +1,7 @@
 //express connection and inserting my data to mongodb
 import Express from 'express';
 import Parser from 'body-parser';
+import {connect} from './db.js';
 import {loadRenterData} from './data/renterdata.js';
 import {loadGrillData} from './data/grilldata.js';
 import {loadCalendarData} from './data/calendar.js';
@@ -29,5 +30,6 @@ if( ENV === 'development'){
   loadGrillData();
   loadCalendarData();
 };
+
 
 export default app;
