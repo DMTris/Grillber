@@ -8,6 +8,7 @@ export default class {
   * @param location
   * @param date deliver
   * @param date pickup
+  * @param priceRate -@TODO create a cost formula
   * @param status
 */
   constructor( renter = {}, grill = {}, extras, location, dateDeliver, datePickup, status ){

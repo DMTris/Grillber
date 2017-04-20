@@ -8,15 +8,15 @@ export default class {
   * @param fuel
   * @param size
   * @param price
-  * @param rented
+  * @param isRented
 */
-  constructor( brand, series, name, fuel, size, price, rented ){
+  constructor( brand, series, name, fuel, size, price, isRented ){
     this.brand = brand;
     this.series = series;
     this.name = name;
     this.fuel = fuel;
     this.size = size;
     this.price = price;
-    this.rented = rented;
+    this.isRented = isRented;
   }
 }
