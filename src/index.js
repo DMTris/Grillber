@@ -16,7 +16,7 @@ app.use('/grillber', GrillberRoute);
 
 app.listen(port, () => console.log(`App start: http://localhost:${port}`));
 
-//loading data to mongodb from renterdata.js
+//delete data and load data to mongodb from renterdata.js
 if( ENV === 'development'){
   delData();
   loadData();
