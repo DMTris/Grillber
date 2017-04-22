@@ -1,5 +1,5 @@
 {
-  "name": "node-es7-boilerplate",
+  "name": "grillber_backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "express": "^4.15.2",
     "mongodb": "^2.2.25"
   }

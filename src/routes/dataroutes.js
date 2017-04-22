@@ -5,22 +5,26 @@ import { getCollection } from '../db.js';
 
 import { renters, grills, calendar } from '../data/thedata.js';
 
-const appRoute = new Router();
+const router = new Router();
 
-appRoute.route('/grills').get((req, res) => { return res.json(grills); });
+router.route('/grills').get((req, res) => { return res.json(grills); });
 
-appRoute.route('/renters').get((req, res) => { return res.json(renters); });
+router.route('/renters').get((req, res) => { return res.json(renters); });
 
-appRoute.route('/calendar').get((req, res) => { return res.json(calendar); });
+router.route('/calendar').get((req, res) => { return res.json(calendar); });
 
-appRoute.route('/renters/:email').get((req, res) => {
+router.route('/renters/:email').get((req, res) => {
   let renterEmail = renters.filter( renter => renter.email === req.params.email );
   return res.json( renterEmail );
 })
 
-appRoute.route('/grills/:grillname').get((req, res) => {
+router.route('/grills/:grillname').get((req, res) => {
   let grillName = grills.filter( grill => grill.name === req.params.grillname );
   return res.json( grillName );
 })
 
-export default appRoute;
+router.post('/testing', (req, res) => {
+  console.log('Heeeeeeeeellllllooooooo');
+});
+
+export default router;
