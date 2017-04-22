@@ -1,6 +1,6 @@
 import { Router } from 'Express';
 import { getCollection } from '../db.js';
-import { Appointment } from '../data/appointments.js';
+import Appointment from '../data/appointments.js';
 import { calendar } from '../data/thedata.js';
 
 const router = new Router();
@@ -15,9 +15,14 @@ const getAppByStatus = async(status) => {
   return await (await calendarCollection.find({status}).toArray());
 }
 //method to add an appointments
-const addAppointment = async(appointment)=> {
+const addAppointment = async(appointment) => {
   const calendarCollection = await getCollection('calendar');
   return await (await calendarCollection.insertOne(appointment));
+}
+//method to remove an appointment
+const remAppointment = async(appointment) => {
+  const calendarCollection = await getCollection('calendar');
+  return await (await calendarCollection.updateOne({appointment}, {$set: {'isActive': false}}));
 }
 //route for get calendar
 router.get('/', (req, res) => {
@@ -51,5 +56,9 @@ router.post('/', (req, res) => {
   addAppointment(appointment);
   return res.json(appointment);
 })
-
+//route for delete/remove appointments
+router.delete('/:status', (req, res) => {
+  remAppointment(req.params.status);
+  return res.send(`Appointments that are ${status} have been removed.`);
+})
 export default router;

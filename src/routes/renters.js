@@ -1,7 +1,7 @@
 //importing requirements
 import { Router } from 'Express';
 import { getCollection } from '../db.js';
-import { Renter } from '../data/renters.js';
+import Renter from '../data/renters.js';
 
 const router = new Router();
 //methods for getting renters
@@ -19,6 +19,11 @@ const addRenter = async(renter) => {
   const rentersCollection = await getCollection('renters');
   return await (await rentersCollection.insertOne(renter));
 }
+//method for removing a renter (does not fully delete)
+const remRenter = async(email) => {
+  const rentersCollection = await getCollection('renters');
+  return await (await rentersCollection.updateOne({email: 'email'}, {$set: {'isActive': false}}));
+}
 //routes for renters
 router.get('/', (req, res) => {
   return getAllRenters().then(renters => res.json(renters));
@@ -28,8 +33,7 @@ router.get('/:renter', (req, res) => {
   return getRenterByEmail(req.params.renter).then(renter => res.json(renter));
 })
 //route to post a renter
-/*
-* @param name
+/** @param name
 * @param email
 * @param password
 * @param location
@@ -45,5 +49,10 @@ router.post('/', (req, res) => {
   );
   addRenter(renter);
   return res.json(renter);
+})
+//route to remove a renter
+router.delete('/:email', (req, res) => {
+  remRenter(req.params.email);
+  return res.send(`The renter with the email: ${req.params.email} has been removed.`);
 })
 export default router;
