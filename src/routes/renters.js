@@ -22,7 +22,7 @@ const addRenter = async(renter) => {
 //method for removing a renter (does not fully delete)
 const remRenter = async(email) => {
   const rentersCollection = await getCollection('renters');
-  return await (await rentersCollection.updateOne({email: 'email'}, {$set: {'isActive': false}}));
+  return await (await rentersCollection.remove({email: { $eq: 'email' }}));
 }
 //routes for renters
 router.get('/', (req, res) => {
