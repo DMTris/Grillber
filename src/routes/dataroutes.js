@@ -1,5 +1,5 @@
 //This is creating routes for my data
-import { Router } from 'Express';
+import { Router } from 'express';
 import Parser from 'body-parser';
 import { getCollection } from '../db.js';
 

@@ -1,4 +1,4 @@
-import { Router } from 'Express';
+import { Router } from 'express';
 import { getCollection } from '../db.js';
 import Appointment from '../data/appointments.js';
 import { calendar } from '../data/thedata.js';

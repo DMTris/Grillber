@@ -1,11 +1,15 @@
 //mongodb connection and collection function to grillber
 import { MongoClient } from 'mongodb';
 
-const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/grillber';
+const schema = 'grillber';
+const mlabUser = 'grillberadmin';
+const mlabPass = '1234grill';
+
+const mongoUri = process.env.MONGO_URI || 'mongodb://grillberadmin:1234grill@ds129641.mlab.com:29641/grillber';
 
 export const connect = async () => await MongoClient.connect(mongoUri);
 
 export const getCollection = async (myCollection) => {
   const db = await connect();
-  return db.collection(myCollection);
+  return await db.collection(myCollection);
 };

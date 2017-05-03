@@ -1,5 +1,5 @@
 //importing requirements
-import { Router } from 'Express';
+import { Router } from 'express';
 import { getCollection } from '../db.js';
 import Renter from '../data/renters.js';
 
@@ -51,7 +51,7 @@ router.post('/', (req, res) => {
   return res.json(renter);
 })
 //route to remove a renter
-router.delete('/:email', (req, res) => {
+router.delete('/emaildelete/:email', (req, res) => {
   remRenter(req.params.email);
   return res.send(`The renter with the email: ${req.params.email} has been removed.`);
 })

@@ -18,16 +18,16 @@
     ]
   },
   "devDependencies": {
-    "ava": "^0.19.1",
-    "babel-cli": "^6.22.2",
-    "babel-polyfill": "^6.22.0",
-    "babel-preset-pundits": "^2.0.3",
-    "babel-register": "^6.22.0"
+    "ava": "^0.19.1"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "express": "^4.15.2",
-    "mongodb": "^2.2.25"
+    "mongodb": "^2.2.25",
+    "babel-cli": "^6.22.2",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-pundits": "^2.0.3",
+    "babel-register": "^6.22.0"
   }
 }

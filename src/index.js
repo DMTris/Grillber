@@ -11,7 +11,7 @@ import calendarRoute from './routes/calendar.js';
 
 const app = Express();
 const ENV = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 
 app.use(cors());
