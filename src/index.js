@@ -22,10 +22,10 @@ app.use('/calendar', calendarRoute);
 
 app.listen(port, () => console.log(`App start: http://localhost:${port}`));
 
-//delete data and load data to mongodb from renterdata.js
-if( ENV === 'development'){
-  delData();
-  loadData();
-};
+//delete and load mock data.
+// if( ENV === 'development'){
+//   delData();
+//   loadData();
+// };
 
 export default app;

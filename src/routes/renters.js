@@ -29,8 +29,8 @@ router.get('/', (req, res) => {
   return getAllRenters().then(renters => res.json(renters));
 })
 //route for a renter by email
-router.get('/:renter', (req, res) => {
-  return getRenterByEmail(req.params.renter).then(renter => res.json(renter));
+router.post('/:email', (req, res) => {
+  return getRenterByEmail(req.params.email).then(renter => res.json(renter));
 })
 //route to post a renter
 /** @param name
